@@ -15,4 +15,4 @@
 2. [Методы построения моделей машинного обучения.](https://github.com/DanilaNik/IU5_ML2024/tree/main/rk2)
 
 ## НИР:
-1. [Решение задачи машинного обучения.](https://github.com/DanilaNik/IU5_ML2024/tree/main/rk1)
+1. [Решение задачи машинного обучения.](https://github.com/DanilaNik/IU5_ML2024/tree/main/NIR)
