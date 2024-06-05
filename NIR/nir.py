@@ -5,6 +5,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import GridSearchCV
 from sklearn.neighbors import KNeighborsClassifier
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Функция для загрузки данных
 @st.cache
@@ -27,6 +28,18 @@ def preprocess_data(data_in):
 # Загрузка и предварительная обработка данных
 data = load_data()
 data_X, data_y = preprocess_data(data)
+
+st.subheader('Датасет')
+st.write(data.head())  # Добавление data.head()
+
+# Вычисление матрицы корреляций
+corr_matrix = data.corr()
+
+# Визуализация матрицы корреляций с помощью тепловой карты
+st.subheader('Матрица корреляций')
+fig, ax = plt.subplots(figsize=(10, 8))
+sns.heatmap(corr_matrix, annot=True, fmt='.2f', linewidths=.5, ax=ax)
+st.pyplot(fig)  # Добавление матрицы корреляци
 
 # Интерфейс пользователя
 st.sidebar.header('Метод ближайших соседей (KNN)')
